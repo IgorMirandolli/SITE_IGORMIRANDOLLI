@@ -135,7 +135,10 @@ function renderPortfolio(data) {
 
 async function loadPortfolio() {
   try {
-    const response = await fetch("/api/portfolio");
+    let response = await fetch("/api/portfolio");
+    if (!response.ok) {
+      response = await fetch("./data.json");
+    }
     if (!response.ok) throw new Error("Erro ao carregar dados");
     const data = await response.json();
     renderPortfolio(data);
@@ -166,3 +169,4 @@ if (year) year.textContent = new Date().getFullYear();
 
 setupAnimations();
 loadPortfolio();
+
