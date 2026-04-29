@@ -62,8 +62,8 @@ Durante o desenvolvimento deste projeto, foram aplicados conceitos como:
 ## 📬 Contato
 
 - GitHub: https://github.com/IgorMirandolli  
-- LinkedIn: *[(adicione aqui)](https://www.linkedin.com/in/igor-vinicius-sotili-mirandolli-b06392327/)*  
-- Email: *([adicione aqui](https://github.com/IgorMirandolli))*  
+- LinkedIn: *[(clique aqui)](https://www.linkedin.com/in/igor-vinicius-sotili-mirandolli-b06392327/)*  
+- Email: *([clique aqui](https://github.com/IgorMirandolli))*  
 
 ---
 
