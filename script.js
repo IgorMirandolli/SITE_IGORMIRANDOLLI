@@ -135,13 +135,28 @@ function renderPortfolio(data) {
 
 async function loadPortfolio() {
   try {
-    let response = await fetch("/api/portfolio");
-    if (!response.ok) {
-      response = await fetch("./data.json");
+    const isGitHubPages = window.location.hostname.endsWith("github.io");
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+    const repoBase = isGitHubPages && pathParts.length > 0 ? `/${pathParts[0]}` : "";
+
+    const urlsToTry = isGitHubPages
+      ? [`${repoBase}/data.json`, "./data.json"]
+      : ["/api/portfolio", "./data.json"];
+
+    let lastError = null;
+    for (const url of urlsToTry) {
+      try {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) continue;
+        const data = await response.json();
+        renderPortfolio(data);
+        return;
+      } catch (error) {
+        lastError = error;
+      }
     }
-    if (!response.ok) throw new Error("Erro ao carregar dados");
-    const data = await response.json();
-    renderPortfolio(data);
+
+    throw lastError || new Error("Erro ao carregar dados");
   } catch (error) {
     const heroTagline = document.getElementById("hero-tagline");
     if (heroTagline) heroTagline.textContent = "Nao foi possivel carregar os dados agora.";
