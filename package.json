@@ -1,0 +1,17 @@
+﻿{
+  "name": "site-igormirandolli",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal com Node.js e JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT"
+}

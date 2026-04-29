@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Seu Nome | Portfólio</title>
+  <meta id="page-description" name="description" content="Portfólio de desenvolvedor Flutter e backend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="topbar">
+    <a href="#home" class="logo">Igor<span>Mirandolli</span></a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section reveal">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="badge">Disponível para oportunidades</p>
+          <h1 id="hero-name">Igor Vinicius Sotili Mirandolli</h1>
+          <h2 id="hero-role">Desenvolvedor de backend e frontend</h2>
+          <p id="hero-tagline" class="hero-text">Carregando...</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projetos">Ver projetos</a>
+            <a class="btn ghost" href="#contato">Entrar em contato</a>
+          </div>
+        </div>
+        <div class="hero-photo-card">
+          <img id="hero-photo" src="" alt="Foto de perfil" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section reveal">
+      <h3>Sobre você</h3>
+      <div id="about-text">Carregando...</div>
+      <div id="about-chips" class="chips"></div>
+    </section>
+
+    <section id="projetos" class="section reveal">
+      <div class="section-title-row">
+        <h3>Projetos em destaque</h3>
+        <p>2 projetos bem explicados e completos.</p>
+      </div>
+
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <section id="tecnologias" class="section reveal">
+      <h3>Tecnologias</h3>
+      <div id="tech-grid" class="tech-grid"></div>
+    </section>
+
+    <section class="section reveal">
+      <h3>Diferenciais</h3>
+      <div id="highlights" class="highlights"></div>
+    </section>
+
+    <section class="section reveal">
+      <h3>Evolução e objetivo</h3>
+      <p><strong>Atualmente:</strong> <span id="current-focus">Carregando...</span></p>
+      <p><strong>Objetivo:</strong> <span id="career-goal">Carregando...</span></p>
+    </section>
+
+    <section id="contato" class="section reveal">
+      <h3>Contato</h3>
+      <div id="contact-box" class="contact-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> <span id="footer-name">Seu Nome</span>. Feito com foco em qualidade.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
