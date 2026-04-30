@@ -28,6 +28,18 @@ function getYouTubeEmbedUrl(url) {
   return "";
 }
 
+function getDirectDownloadUrl(url) {
+  const raw = safeText(url).trim();
+  if (!raw) return "#";
+
+  const driveMatch = raw.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+  if (driveMatch) {
+    return `https://drive.google.com/uc?export=download&id=${driveMatch[1]}`;
+  }
+
+  return raw;
+}
+
 function renderPortfolio(data) {
   document.title = safeText(data.pageTitle) || document.title;
 
@@ -48,7 +60,10 @@ function renderPortfolio(data) {
   if (heroName) heroName.textContent = safeText(data.name);
   if (heroRole) heroRole.textContent = safeText(data.role);
   if (heroTagline) heroTagline.textContent = safeText(data.tagline);
-  if (heroCvBtn) heroCvBtn.href = safeText(data.cvUrl) || "#";
+  if (heroCvBtn) {
+    heroCvBtn.href = getDirectDownloadUrl(data.cvUrl);
+    heroCvBtn.setAttribute("download", "curriculo-igor.pdf");
+  }
   if (heroPhoto && heroPhotoCard) {
     const profileImageUrl = safeText(data.profileImageUrl);
     if (profileImageUrl) {
