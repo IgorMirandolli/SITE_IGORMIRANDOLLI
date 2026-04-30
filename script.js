@@ -37,6 +37,7 @@ function renderPortfolio(data) {
   const heroName = document.getElementById("hero-name");
   const heroRole = document.getElementById("hero-role");
   const heroTagline = document.getElementById("hero-tagline");
+  const heroCvBtn = document.getElementById("hero-cv-btn");
   const heroPhoto = document.getElementById("hero-photo");
   const heroPhotoCard = heroPhoto ? heroPhoto.closest(".hero-photo-card") : null;
   const footerName = document.getElementById("footer-name");
@@ -47,6 +48,7 @@ function renderPortfolio(data) {
   if (heroName) heroName.textContent = safeText(data.name);
   if (heroRole) heroRole.textContent = safeText(data.role);
   if (heroTagline) heroTagline.textContent = safeText(data.tagline);
+  if (heroCvBtn) heroCvBtn.href = safeText(data.cvUrl) || "#";
   if (heroPhoto && heroPhotoCard) {
     const profileImageUrl = safeText(data.profileImageUrl);
     if (profileImageUrl) {
