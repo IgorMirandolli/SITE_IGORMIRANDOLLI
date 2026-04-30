@@ -18,8 +18,24 @@ const mimeTypes = {
   ".ico": "image/x-icon"
 };
 
+function getSecurityHeaders() {
+  return {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
+    "Cross-Origin-Opener-Policy": "same-origin",
+    "Cross-Origin-Resource-Policy": "same-origin",
+    "Content-Security-Policy":
+      "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-src https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+  };
+}
+
 function sendJson(response, statusCode, data) {
-  response.writeHead(statusCode, { "Content-Type": "application/json; charset=utf-8" });
+  response.writeHead(statusCode, {
+    ...getSecurityHeaders(),
+    "Content-Type": "application/json; charset=utf-8"
+  });
   response.end(JSON.stringify(data));
 }
 
@@ -32,28 +48,52 @@ function serveFile(response, filePath) {
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || "application/octet-stream";
-    response.writeHead(200, { "Content-Type": contentType });
+    response.writeHead(200, {
+      ...getSecurityHeaders(),
+      "Content-Type": contentType
+    });
     response.end(content);
   });
 }
 
 const server = http.createServer((request, response) => {
-  const url = request.url || "/";
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    sendJson(response, 405, { error: "Metodo nao permitido" });
+    return;
+  }
 
-  if (url === "/api/portfolio") {
+  let pathname = "/";
+  try {
+    const parsedUrl = new URL(request.url || "/", "http://localhost");
+    pathname = decodeURIComponent(parsedUrl.pathname);
+  } catch {
+    sendJson(response, 400, { error: "URL invalida" });
+    return;
+  }
+
+  if (pathname === "/api/portfolio") {
     sendJson(response, 200, portfolioData);
     return;
   }
 
-  const safePath = url === "/" ? "index.html" : url.replace(/^\//, "");
-  const filePath = path.join(baseDir, safePath);
+  const safePath = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
+  const resolvedPath = path.resolve(baseDir, safePath);
+  const baseDirWithSep = baseDir.endsWith(path.sep) ? baseDir : `${baseDir}${path.sep}`;
 
-  if (!filePath.startsWith(baseDir)) {
+  if (
+    !resolvedPath.startsWith(baseDirWithSep) &&
+    resolvedPath !== baseDir
+  ) {
     sendJson(response, 403, { error: "Acesso negado" });
     return;
   }
 
-  serveFile(response, filePath);
+  if (path.basename(resolvedPath).startsWith(".")) {
+    sendJson(response, 403, { error: "Acesso negado" });
+    return;
+  }
+
+  serveFile(response, resolvedPath);
 });
 
 function startServer(initialPort) {
