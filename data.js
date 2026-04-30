@@ -5,7 +5,7 @@
   role: "Desenvolvedor de backend e frontend",
   profileImageUrl: "./imagens/profile.jpg",
   tagline: "Desenvolvo aplicações completas com Flutter e APIs, focado em performance e experiência do usuário.",
-  cvUrl: "https://drive.google.com/file/d/1TUlXLWC3owhSMgenhp1D4PXtRBk0mAlQ/view?usp=sharing",
+  cvUrl: "./imagens/curriculoIgorViniciusSotiliMirandolli.pdf",
   about: `Sou estudante de Sistemas de Informação, atualmente no 5º semestre, com foco em desenvolvimento de software e construção de aplicações completas.
 
 Ao longo da graduação, adquiri conhecimentos em áreas como modelos, métodos e técnicas da engenharia de software, gestão e qualidade de software, sistemas computacionais e segurança, ambientes computacionais e conectividade, usabilidade, desenvolvimento web, mobile e jogos, além de sistemas distribuídos.
