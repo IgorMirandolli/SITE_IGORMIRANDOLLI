@@ -21,7 +21,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
       imageUrl: "./imagens/patriqueapp.png",
       description: "A Patrique Fitness é um ecossistema completo para quem busca saúde e alta performance. Mais do que um simples rastreador de treinos, o app utiliza gamificação e inteligência artificial para manter o usuário motivado e bem orientado.",
       tech: ["Flutter", "Node.js", "MySQL"],
-      github: "https://github.com/IgorMirandolli/patrique_app"
+      github: "https://github.com/victorhasse/patrique_app"
     },
     {
       name: "Unisouls",
