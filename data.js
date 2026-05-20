@@ -16,6 +16,13 @@ Atualmente, atuo como estagiário de desenvolvimento de software na Secretaria d
 
 Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar soluções eficientes, bem estruturadas e que gerem valor real.`,
   projects: [
+     {
+      name: "Burger Factory",
+      imageUrl: "./imagens/burgerfactory.png",
+      description: "Plataforma full stack para hamburgueria, com cardápio digital, carrinho e checkout para visitantes (sem login obrigatório), além de autenticação para clientes e admins. O sistema inclui painel administrativo para gestão de pedidos e produtos, atualização de status em tempo real e interface responsiva para mobile e desktop.",
+      tech: ["Vue.js", "Quasar", "Node.js", "Express", "MySQL", "JWT"],
+      github: "https://github.com/IgorMirandolli/FRONTEND_BURGUERFACTORY"
+    },
     {
       name: "Patrique Fitness App",
       imageUrl: "./imagens/patriqueapp.png",

@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const portfolioData = require("./data");
 
-const DEFAULT_PORT = Number(process.env.PORT) || 3000;
+const DEFAULT_PORT = Number(process.env.PORT) || 4000;
 const baseDir = __dirname;
 
 const mimeTypes = {
