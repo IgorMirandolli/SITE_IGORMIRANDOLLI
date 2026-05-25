@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://igormirandolli.github.io/SITE_IGORMIRANDOLLI/sitemap.xml
