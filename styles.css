@@ -7,7 +7,7 @@
   --secondary: #55b5ff;
   --card: rgba(34, 49, 82, 0.78);
   --border: rgba(255, 255, 255, 0.16);
-  --layout-max: 1320px;
+  --layout-max: 1080px;
 }
 
 * {
@@ -30,6 +30,12 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+@media (min-width: 761px) {
+  body {
+    zoom: 1.17;
+  }
 }
 
 .bg-orb {
