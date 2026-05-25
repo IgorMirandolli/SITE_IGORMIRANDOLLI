@@ -7,6 +7,7 @@
   --secondary: #55b5ff;
   --card: rgba(34, 49, 82, 0.78);
   --border: rgba(255, 255, 255, 0.16);
+  --layout-max: 1320px;
 }
 
 * {
@@ -54,7 +55,7 @@ body {
 }
 
 .topbar {
-  width: min(1080px, 92%);
+  width: min(var(--layout-max), 94%);
   margin: 1.2rem auto;
   padding: 0.95rem 1rem;
   display: flex;
@@ -98,7 +99,7 @@ nav a:hover {
 }
 
 main {
-  width: min(1080px, 92%);
+  width: min(var(--layout-max), 94%);
   margin: 0 auto 4rem;
 }
 
