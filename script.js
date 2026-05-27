@@ -40,6 +40,12 @@ function getDirectDownloadUrl(url) {
   return raw;
 }
 
+function getEmbeddedPortfolioData() {
+  if (typeof window === "undefined") return null;
+  const embeddedData = window.__PORTFOLIO_DATA__;
+  return embeddedData && typeof embeddedData === "object" ? embeddedData : null;
+}
+
 function renderPortfolio(data) {
   document.title = safeText(data.pageTitle) || document.title;
 
@@ -152,9 +158,16 @@ function renderPortfolio(data) {
 
 async function loadPortfolio() {
   try {
+    const embeddedData = getEmbeddedPortfolioData();
+    if (embeddedData) {
+      renderPortfolio(embeddedData);
+      return;
+    }
+
     const isGitHubPages = window.location.hostname.endsWith("github.io");
     const pathParts = window.location.pathname.split("/").filter(Boolean);
     const repoBase = isGitHubPages && pathParts.length > 0 ? `/${pathParts[0]}` : "";
+    const fetchCache = isGitHubPages ? "force-cache" : "default";
 
     const urlsToTry = isGitHubPages
       ? [`${repoBase}/data.json`, "./data.json"]
@@ -163,7 +176,7 @@ async function loadPortfolio() {
     let lastError = null;
     for (const url of urlsToTry) {
       try {
-        const response = await fetch(url, { cache: "no-store" });
+        const response = await fetch(url, { cache: fetchCache });
         if (!response.ok) continue;
         const data = await response.json();
         renderPortfolio(data);

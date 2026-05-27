@@ -18,7 +18,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
   projects: [
      {
       name: "Burger Factory",
-      imageUrl: "./imagens/burgerfactory.png",
+      imageUrl: "./imagens/burgerfactory.jpg",
       description: "Plataforma full stack para hamburgueria, com cardápio digital, carrinho e checkout para visitantes (sem login obrigatório), além de autenticação para clientes e admins. O sistema inclui painel administrativo para gestão de pedidos e produtos, atualização de status em tempo real e interface responsiva para mobile e desktop.",
       tech: ["Vue.js", "Quasar", "Node.js", "Express", "MySQL", "JWT"],
       github: "https://github.com/IgorMirandolli/FRONTEND_BURGUERFACTORY"
@@ -65,5 +65,11 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
   }
 };
 
-module.exports = portfolioData;
+if (typeof window !== "undefined") {
+  window.__PORTFOLIO_DATA__ = portfolioData;
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = portfolioData;
+}
 

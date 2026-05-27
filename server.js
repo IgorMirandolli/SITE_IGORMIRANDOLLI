@@ -15,7 +15,8 @@ const mimeTypes = {
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".svg": "image/svg+xml",
-  ".ico": "image/x-icon"
+  ".ico": "image/x-icon",
+  ".pdf": "application/pdf"
 };
 
 function getSecurityHeaders() {
@@ -31,12 +32,27 @@ function getSecurityHeaders() {
   };
 }
 
-function sendJson(response, statusCode, data) {
+function sendJson(response, statusCode, data, cacheControl = "no-store") {
   response.writeHead(statusCode, {
     ...getSecurityHeaders(),
-    "Content-Type": "application/json; charset=utf-8"
+    "Content-Type": "application/json; charset=utf-8",
+    "Cache-Control": cacheControl
   });
   response.end(JSON.stringify(data));
+}
+
+function getCacheControl(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+
+  if (ext === ".html") return "no-cache";
+  if (ext === ".css" || ext === ".js" || ext === ".json") {
+    return "public, max-age=3600";
+  }
+  if (ext === ".png" || ext === ".jpg" || ext === ".jpeg" || ext === ".svg" || ext === ".ico" || ext === ".pdf") {
+    return "public, max-age=604800";
+  }
+
+  return "public, max-age=3600";
 }
 
 function serveFile(response, filePath) {
@@ -50,7 +66,8 @@ function serveFile(response, filePath) {
     const contentType = mimeTypes[ext] || "application/octet-stream";
     response.writeHead(200, {
       ...getSecurityHeaders(),
-      "Content-Type": contentType
+      "Content-Type": contentType,
+      "Cache-Control": getCacheControl(filePath)
     });
     response.end(content);
   });
@@ -72,7 +89,7 @@ const server = http.createServer((request, response) => {
   }
 
   if (pathname === "/api/portfolio") {
-    sendJson(response, 200, portfolioData);
+    sendJson(response, 200, portfolioData, "public, max-age=300");
     return;
   }
 
