@@ -1,4 +1,4 @@
-# 🚀 Portfólio - Igor Mirandolli
+# 🚀 Portfólio - Igor Mirandolli 
 
 Meu site pessoal feito pra reunir meus projetos, habilidades e um pouco sobre mim como desenvolvedor.
 
