@@ -31,6 +31,14 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
       github: "https://github.com/victorhasse/patrique_app"
     },
     {
+      name: "Controle Financeiro",
+      imageUrl: "./imagens/controlefinanceiro.png",
+      description: "Aplicação web para organizar receitas, despesas, categorias e saldo, com dashboard responsivo e gráficos para análise financeira. Desenvolvido com JavaScript, Node.js, HTML e CSS, com API estruturada e foco em uso prático e apresentação profissional.",
+      tech: ["JavaScript", "Node.js", "HTML/CSS", "MySQL"],
+      github: "https://github.com/IgorMirandolli/controle_financeiro_railway.git",
+      link: "https://controlefinanceirorailway-production.up.railway.app/"
+    },
+    {
       name: "Unisouls",
       mediaText: "Imagem ou vídeo do projeto",
       trailerUrl: "https://www.youtube.com/watch?v=zmuAaCuOgoE",

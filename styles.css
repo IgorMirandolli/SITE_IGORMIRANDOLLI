@@ -308,9 +308,14 @@ h3 {
   padding: 0.25rem 0.6rem;
 }
 
-.card a {
-  display: inline-block;
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 0.9rem;
   margin-top: 0.9rem;
+}
+
+.card-links a {
   color: var(--primary);
   text-decoration: none;
   font-weight: 600;

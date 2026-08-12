@@ -101,6 +101,14 @@ function renderPortfolio(data) {
         const techList = (project.tech || []).map((tech) => `<li>${safeText(tech)}</li>`).join("");
         const embedUrl = getYouTubeEmbedUrl(project.trailerUrl);
         const imageUrl = safeText(project.imageUrl);
+        const githubUrl = safeText(project.github).trim();
+        const projectUrl = safeText(project.link).trim();
+        const projectLinks = [
+          githubUrl ? `<a href="${githubUrl}" target="_blank" rel="noopener">GitHub do projeto</a>` : "",
+          projectUrl ? `<a href="${projectUrl}" target="_blank" rel="noopener">Ver projeto</a>` : ""
+        ]
+          .filter(Boolean)
+          .join("");
         const mediaHtml = embedUrl
           ? `<div class="thumb thumb-video"><iframe src="${embedUrl}" title="Trailer de ${safeText(
               project.name
@@ -116,7 +124,7 @@ function renderPortfolio(data) {
             <h4>${safeText(project.name)}</h4>
             <p>${safeText(project.description)}</p>
             <ul>${techList}</ul>
-            <a href="${safeText(project.github)}" target="_blank" rel="noopener">GitHub do projeto</a>
+            <div class="card-links">${projectLinks}</div>
           </article>
         `;
       })
