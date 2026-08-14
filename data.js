@@ -39,6 +39,13 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
       link: "https://controlefinanceirorailway-production.up.railway.app/"
     },
     {
+      name: "App de Clima",
+      imageUrl: "./imagens/appclima2.png",
+      description: "Aplicação web responsiva para previsão do tempo que exibe dados meteorológicos atuais e a projeção para os próximos cinco dias. O projeto utiliza a Geolocation API para identificar a localização do usuário de forma automática, além de contar com um sistema de busca manual de cidades com sugestões em tempo real. Desenvolvido inteiramente com JavaScript puro, HTML5 e CSS3, o sistema consome as APIs do Open-Meteo e BigDataCloud de forma otimizada utilizando Vite, garantindo uma interface fluida, acessível e com estados dinâmicos em qualquer dispositivo.",
+      tech: ["JavaScript", "HTML/CSS", "Vite", "APIs"],
+      github: "https://github.com/IgorMirandolli/app_clima_frotend.git"
+    },
+    {
       name: "Unisouls",
       mediaText: "Imagem ou vídeo do projeto",
       trailerUrl: "https://www.youtube.com/watch?v=zmuAaCuOgoE",
