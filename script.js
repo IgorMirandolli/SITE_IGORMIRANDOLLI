@@ -101,6 +101,10 @@ function renderPortfolio(data) {
         const techList = (project.tech || []).map((tech) => `<li>${safeText(tech)}</li>`).join("");
         const embedUrl = getYouTubeEmbedUrl(project.trailerUrl);
         const imageUrl = safeText(project.imageUrl);
+        const projectSlug = safeText(project.slug).trim();
+        const detailUrl = projectSlug
+          ? `./projeto.html?slug=${encodeURIComponent(projectSlug)}`
+          : "./projeto.html";
         const githubUrl = safeText(project.github).trim();
         const projectUrl = safeText(project.link).trim();
         const projectLinks = [
@@ -119,16 +123,38 @@ function renderPortfolio(data) {
             )}" loading="lazy"></div>`
           : `<div class="thumb">${safeText(project.mediaText)}</div>`;
         return `
-          <article class="card">
-            ${mediaHtml}
-            <h4>${safeText(project.name)}</h4>
-            <p>${safeText(project.description)}</p>
-            <ul>${techList}</ul>
+          <article class="card project-card" data-detail-url="${detailUrl}">
+            <div class="project-card-main" role="link" tabindex="0" aria-label="Abrir detalhes do projeto ${safeText(
+              project.name
+            )}">
+              ${mediaHtml}
+              <h4>${safeText(project.name)}</h4>
+              <p>${safeText(project.description)}</p>
+              <ul>${techList}</ul>
+            </div>
             <div class="card-links">${projectLinks}</div>
           </article>
         `;
       })
       .join("");
+
+    projectsGrid.querySelectorAll(".project-card-main").forEach((card) => {
+      const projectCard = card.closest(".project-card");
+      const detailUrl = projectCard?.getAttribute("data-detail-url") || "";
+
+      const openProjectDetail = () => {
+        if (!detailUrl) return;
+        window.open(detailUrl, "_blank", "noopener");
+      };
+
+      card.addEventListener("click", openProjectDetail);
+      card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openProjectDetail();
+        }
+      });
+    });
   }
 
   const techGrid = document.getElementById("tech-grid");

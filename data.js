@@ -16,8 +16,9 @@ Atualmente, atuo como estagiário de desenvolvimento de software na Secretaria d
 
 Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar soluções eficientes, bem estruturadas e que gerem valor real.`,
   projects: [
-     {
+    {
       name: "Burger Factory",
+      slug: "burger-factory",
       imageUrl: "./imagens/burgerfactory.jpg",
       description: "Plataforma full stack para hamburgueria, com cardápio digital, carrinho e checkout para visitantes (sem login obrigatório), além de autenticação para clientes e admins. O sistema inclui painel administrativo para gestão de pedidos e produtos, atualização de status em tempo real e interface responsiva para mobile e desktop.",
       tech: ["Vue.js", "Quasar", "Node.js", "Express", "MySQL", "JWT"],
@@ -25,6 +26,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
     },
     {
       name: "Patrique Fitness App",
+      slug: "patrique-fitness-app",
       imageUrl: "./imagens/patriqueapp.png",
       description: "A Patrique Fitness é um ecossistema completo para quem busca saúde e alta performance. Mais do que um simples rastreador de treinos, o app utiliza gamificação e inteligência artificial para manter o usuário motivado e bem orientado.",
       tech: ["Flutter", "Node.js", "MySQL"],
@@ -32,6 +34,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
     },
     {
       name: "Controle Financeiro",
+      slug: "controle-financeiro",
       imageUrl: "./imagens/controlefinanceiro.png",
       description: "Aplicação web para organizar receitas, despesas, categorias e saldo, com dashboard responsivo e gráficos para análise financeira. Desenvolvido com JavaScript, Node.js, HTML e CSS, com API estruturada e foco em uso prático e apresentação profissional.",
       tech: ["JavaScript", "Node.js", "HTML/CSS", "MySQL"],
@@ -40,6 +43,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
     },
     {
       name: "App de Clima",
+      slug: "app-de-clima",
       imageUrl: "./imagens/appclima2.png",
       description: "Aplicação web responsiva para previsão do tempo que exibe dados meteorológicos atuais e a projeção para os próximos cinco dias. O projeto utiliza a Geolocation API para identificar a localização do usuário de forma automática, além de contar com um sistema de busca manual de cidades com sugestões em tempo real. Desenvolvido inteiramente com JavaScript puro, HTML5 e CSS3, o sistema consome as APIs do Open-Meteo e BigDataCloud de forma otimizada utilizando Vite, garantindo uma interface fluida, acessível e com estados dinâmicos em qualquer dispositivo.",
       tech: ["JavaScript", "HTML/CSS", "Vite", "APIs"],
@@ -47,6 +51,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
     },
     {
       name: "Unisouls",
+      slug: "unisouls",
       mediaText: "Imagem ou vídeo do projeto",
       trailerUrl: "https://www.youtube.com/watch?v=zmuAaCuOgoE",
       description: "É um jogo de Ação e Plataforma 2D no estilo Metroidvania e Soulslike, desenvolvido em Pixel Art com a poderosa Godot Engine. Este projeto foi concebido para um trabalho acadêmico (Universidade do Sul de Santa Catarina - 2º e 4º Semestre de 2025).",
