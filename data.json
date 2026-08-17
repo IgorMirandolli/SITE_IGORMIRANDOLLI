@@ -10,8 +10,202 @@
                      {
                          "name":  "Burger Factory",
                          "slug":  "burger-factory",
-                         "imageUrl":  "./imagens/burgerfactory.jpg",
+                         "imageUrl":  "./imagens/projetos/burger-factory/burgerfactory.jpg",
                          "description":  "Plataforma full stack para hamburgueria, com cardápio digital, carrinho e checkout para visitantes (sem login obrigatório), além de autenticação para clientes e admins. O sistema inclui painel administrativo para gestão de pedidos e produtos, atualização de status em tempo real e interface responsiva para mobile e desktop.",
+                         "objective":  "Digitalizar a jornada de compra de uma hamburgueria, desde a escolha dos produtos até o acompanhamento do pedido, sem criar barreiras desnecessárias para o cliente.",
+                         "features":  [
+                                          "Cardápio digital organizado para navegação rápida",
+                                          "Carrinho e checkout disponíveis sem login obrigatório",
+                                          "Autenticação com perfis de cliente e administrador",
+                                          "Painel administrativo para gerenciar produtos e pedidos",
+                                          "Atualização do status dos pedidos",
+                                          "Interface responsiva para celular e desktop"
+                                      ],
+                         "technicalDetails":  [
+                                                  "Frontend desenvolvido com Vue.js e Quasar",
+                                                  "API construída com Node.js e Express",
+                                                  "Persistência dos dados em MySQL",
+                                                  "Autenticação e autorização utilizando JWT"
+                                              ],
+                         "learnings":  "O projeto consolidou a integração entre frontend, API e banco de dados, além da organização de diferentes fluxos de acesso para visitantes, clientes e administradores.",
+                         "gallery":  [
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/menu-desktop.png",
+                                             "title":  "Página inicial",
+                                             "category":  "Visão geral",
+                                             "device":  "Desktop",
+                                             "alt":  "Página inicial do Burger Factory",
+                                             "caption":  "Apresentação da marca, chamada principal e acessos rápidos ao cardápio."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/cardapio-desktop.png",
+                                             "title":  "Cardápio e combos",
+                                             "category":  "Cardápio",
+                                             "device":  "Desktop",
+                                             "alt":  "Cardápio do Burger Factory no desktop",
+                                             "caption":  "Combos em destaque com descrição, preço e inclusão rápida no carrinho."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/cardapio-mobile.png",
+                                             "title":  "Cardápio responsivo",
+                                             "category":  "Cardápio",
+                                             "device":  "Mobile",
+                                             "alt":  "Cardápio do Burger Factory no celular",
+                                             "caption":  "Navegação pelo cardápio adaptada para telas menores."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/cart-checkout-desktop.png",
+                                             "title":  "Dados do pedido",
+                                             "category":  "Checkout",
+                                             "device":  "Desktop",
+                                             "alt":  "Início do checkout do Burger Factory no desktop",
+                                             "caption":  "Etapas de identificação, endereço de entrega e resumo do pedido."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/cart-checkout-desktop2.png",
+                                             "title":  "Pagamento e confirmação",
+                                             "category":  "Checkout",
+                                             "device":  "Desktop",
+                                             "alt":  "Formas de pagamento do Burger Factory no desktop",
+                                             "caption":  "Seleção da forma de pagamento, observações e confirmação do pedido."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/cart-checkout-mobile.png",
+                                             "title":  "Checkout mobile",
+                                             "category":  "Checkout",
+                                             "device":  "Mobile",
+                                             "alt":  "Checkout do Burger Factory no celular",
+                                             "caption":  "Formulário de finalização reorganizado para uma leitura confortável no celular."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/cart-checkout-mobile2.png",
+                                             "title":  "Resumo mobile",
+                                             "category":  "Checkout",
+                                             "device":  "Mobile",
+                                             "alt":  "Resumo do pedido do Burger Factory no celular",
+                                             "caption":  "Valores, previsão de entrega e confirmação apresentados em uma única coluna."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/login-desktop.png",
+                                             "title":  "Acesso à conta",
+                                             "category":  "Conta",
+                                             "device":  "Desktop",
+                                             "alt":  "Tela de login do Burger Factory no desktop",
+                                             "caption":  "Entrada na conta para clientes e administradores."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/login-mobile.png",
+                                             "title":  "Login responsivo",
+                                             "category":  "Conta",
+                                             "device":  "Mobile",
+                                             "alt":  "Tela de login do Burger Factory no celular",
+                                             "caption":  "Fluxo de autenticação adaptado para dispositivos móveis."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/perfil-desktop.png",
+                                             "title":  "Perfil do cliente",
+                                             "category":  "Conta",
+                                             "device":  "Desktop",
+                                             "alt":  "Perfil do cliente do Burger Factory no desktop",
+                                             "caption":  "Área para consulta e atualização dos dados do cliente."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/perfil-mobile.png",
+                                             "title":  "Perfil mobile",
+                                             "category":  "Conta",
+                                             "device":  "Mobile",
+                                             "alt":  "Perfil do cliente do Burger Factory no celular",
+                                             "caption":  "Dados da conta organizados para uso em telas compactas."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/pedidos-desktop.png",
+                                             "title":  "Histórico de pedidos",
+                                             "category":  "Pedidos",
+                                             "device":  "Desktop",
+                                             "alt":  "Histórico de pedidos do Burger Factory no desktop",
+                                             "caption":  "Consulta dos pedidos realizados e acesso aos detalhes."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/pedidos-mobile.png",
+                                             "title":  "Pedidos mobile",
+                                             "category":  "Pedidos",
+                                             "device":  "Mobile",
+                                             "alt":  "Histórico de pedidos do Burger Factory no celular",
+                                             "caption":  "Acompanhamento dos pedidos em uma interface de coluna única."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/status-desktop.png",
+                                             "title":  "Acompanhamento do pedido",
+                                             "category":  "Pedidos",
+                                             "device":  "Desktop",
+                                             "alt":  "Status de pedido do Burger Factory no desktop",
+                                             "caption":  "Previsão, etapas do preparo e informações completas da entrega."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/status-mobile.png",
+                                             "title":  "Status mobile",
+                                             "category":  "Pedidos",
+                                             "device":  "Mobile",
+                                             "alt":  "Status de pedido do Burger Factory no celular",
+                                             "caption":  "Acompanhamento da entrega com leitura rápida no celular."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-pedidos-desktop.png",
+                                             "title":  "Gestão de pedidos",
+                                             "category":  "Administração",
+                                             "device":  "Desktop",
+                                             "alt":  "Painel administrativo de pedidos no desktop",
+                                             "caption":  "Indicadores, filtros e atualização de status dos pedidos."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-pedidos-mobile.png",
+                                             "title":  "Pedidos administrativos",
+                                             "category":  "Administração",
+                                             "device":  "Mobile",
+                                             "alt":  "Painel administrativo de pedidos no celular",
+                                             "caption":  "Gestão de pedidos e status adaptada para o celular."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-produtos-desktop.png",
+                                             "title":  "Gestão de produtos",
+                                             "category":  "Administração",
+                                             "device":  "Desktop",
+                                             "alt":  "Painel administrativo de produtos no desktop",
+                                             "caption":  "Resumo, filtros, listagem e formulário de produtos na mesma área."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-produtos-desktop2.png",
+                                             "title":  "Catálogo administrativo",
+                                             "category":  "Administração",
+                                             "device":  "Desktop",
+                                             "alt":  "Catálogo administrativo do Burger Factory no desktop",
+                                             "caption":  "Detalhes da listagem, estados dos produtos e ações de edição."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-produtos-mobile.png",
+                                             "title":  "Resumo de produtos",
+                                             "category":  "Administração",
+                                             "device":  "Mobile",
+                                             "alt":  "Resumo administrativo de produtos no celular",
+                                             "caption":  "Indicadores e filtros do catálogo em formato responsivo."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-produtos-mobile2.png",
+                                             "title":  "Lista de produtos mobile",
+                                             "category":  "Administração",
+                                             "device":  "Mobile",
+                                             "alt":  "Lista administrativa de produtos no celular",
+                                             "caption":  "Produtos, preços, categorias e estados exibidos em cartões."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/burger-factory/admin-produtos-mobile3.png",
+                                             "title":  "Cadastro de produto",
+                                             "category":  "Administração",
+                                             "device":  "Mobile",
+                                             "alt":  "Cadastro administrativo de produto no celular",
+                                             "caption":  "Formulário completo para inclusão e edição de produtos."
+                                         }
+                                     ],
                          "tech":  [
                                       "Vue.js",
                                       "Quasar",
@@ -25,8 +219,30 @@
                      {
                          "name":  "Patrique Fitness App",
                          "slug":  "patrique-fitness-app",
-                         "imageUrl":  "./imagens/patriqueapp.png",
+                         "imageUrl":  "./imagens/projetos/patrique-fitness-app/patriqueapp.png",
                          "description":  "A Patrique Fitness é um ecossistema completo para quem busca saúde e alta performance. Mais do que um simples rastreador de treinos, o app utiliza gamificação e inteligência artificial para manter o usuário motivado e bem orientado.",
+                         "objective":  "Criar uma experiência mobile que una acompanhamento de treinos, motivação e orientação inteligente em uma única plataforma voltada à evolução do usuário.",
+                         "features":  [
+                                          "Acompanhamento da rotina de treinos",
+                                          "Experiência gamificada para estimular consistência",
+                                          "Recursos de inteligência artificial para orientação",
+                                          "Interface mobile desenvolvida para uso durante os treinos",
+                                          "Integração entre aplicativo, backend e banco de dados"
+                                      ],
+                         "technicalDetails":  [
+                                                  "Aplicativo multiplataforma desenvolvido com Flutter",
+                                                  "Backend em Node.js para centralizar regras e integrações",
+                                                  "MySQL para armazenamento estruturado dos dados",
+                                                  "Arquitetura preparada para comunicação entre app e API"
+                                              ],
+                         "learnings":  "O desenvolvimento fortaleceu conhecimentos em Flutter, integração com APIs e modelagem de dados para uma aplicação mobile com diferentes jornadas de uso.",
+                         "gallery":  [
+                                         {
+                                             "src":  "./imagens/projetos/patrique-fitness-app/patriqueapp.png",
+                                             "alt":  "Telas do aplicativo Patrique Fitness",
+                                             "caption":  "Apresentação das principais telas e da identidade visual do aplicativo."
+                                         }
+                                     ],
                          "tech":  [
                                       "Flutter",
                                       "Node.js",
@@ -37,8 +253,50 @@
                      {
                          "name":  "Controle Financeiro",
                          "slug":  "controle-financeiro",
-                         "imageUrl":  "./imagens/controlefinanceiro.png",
+                         "imageUrl":  "./imagens/projetos/controle-financeiro/controlefinanceiro.png",
                          "description":  "Aplicação web para organizar receitas, despesas, categorias e saldo, com dashboard responsivo e gráficos para análise financeira. Desenvolvido com JavaScript, Node.js, HTML e CSS, com API estruturada e foco em uso prático e apresentação profissional.",
+                         "objective":  "Facilitar o controle financeiro pessoal reunindo lançamentos, filtros e indicadores em uma interface clara, rápida e acessível em diferentes dispositivos.",
+                         "features":  [
+                                          "Cadastro e edição de receitas e despesas",
+                                          "Organização dos lançamentos por categorias",
+                                          "Filtros por período e categoria",
+                                          "Resumo automático de receitas, despesas e saldo",
+                                          "Gráficos para apoiar a análise financeira",
+                                          "Dashboard responsivo para desktop e celular"
+                                      ],
+                         "technicalDetails":  [
+                                                  "Interface construída com JavaScript, HTML e CSS",
+                                                  "Backend em Node.js com API estruturada",
+                                                  "Persistência dos lançamentos em MySQL",
+                                                  "Separação entre interface, regras da aplicação e dados"
+                                              ],
+                         "learnings":  "O projeto permitiu praticar a construção de um sistema web completo, desde a modelagem dos lançamentos financeiros até a integração do dashboard com a API e o banco de dados.",
+                         "gallery":  [
+                                         {
+                                             "src":  "./imagens/projetos/controle-financeiro/controlefinanceiro.png",
+                                             "title":  "Visão geral",
+                                             "category":  "Dashboard",
+                                             "device":  "Desktop",
+                                             "alt":  "Dashboard do projeto Controle Financeiro",
+                                             "caption":  "Dashboard com resumo financeiro, filtros e gerenciamento de lançamentos."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/controle-financeiro/controlefinanceiro2.png",
+                                             "title":  "Lançamentos e gráficos",
+                                             "category":  "Dashboard",
+                                             "device":  "Desktop",
+                                             "alt":  "Formulário de lançamentos e gráfico financeiro",
+                                             "caption":  "Cadastro de movimentações ao lado do gráfico mensal de entradas e saídas."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/controle-financeiro/controlefinanceiro3.png",
+                                             "title":  "Movimentações e categorias",
+                                             "category":  "Dashboard",
+                                             "device":  "Desktop",
+                                             "alt":  "Lista de movimentações e gráfico por categoria",
+                                             "caption":  "Histórico financeiro com ações de edição e análise das despesas por categoria."
+                                         }
+                                     ],
                          "tech":  [
                                       "JavaScript",
                                       "Node.js",
@@ -51,8 +309,50 @@
                      {
                          "name":  "App de Clima",
                          "slug":  "app-de-clima",
-                         "imageUrl":  "./imagens/appclima2.png",
+                         "imageUrl":  "./imagens/projetos/app-de-clima/appclima2.png",
                          "description":  "Aplicação web responsiva para previsão do tempo que exibe dados meteorológicos atuais e a projeção para os próximos cinco dias. O projeto utiliza a Geolocation API para identificar a localização do usuário de forma automática, além de contar com um sistema de busca manual de cidades com sugestões em tempo real. Desenvolvido inteiramente com JavaScript puro, HTML5 e CSS3, o sistema consome as APIs do Open-Meteo e BigDataCloud de forma otimizada utilizando Vite, garantindo uma interface fluida, acessível e com estados dinâmicos em qualquer dispositivo.",
+                         "objective":  "Oferecer uma consulta de clima simples e responsiva, detectando automaticamente a localização do usuário e permitindo pesquisar qualquer cidade quando necessário.",
+                         "features":  [
+                                          "Condições meteorológicas atuais",
+                                          "Previsão para os próximos cinco dias",
+                                          "Detecção automática de localização por geolocalização",
+                                          "Busca manual de cidades com sugestões em tempo real",
+                                          "Estados de carregamento e atualização dos dados",
+                                          "Interface adaptada para diferentes tamanhos de tela"
+                                      ],
+                         "technicalDetails":  [
+                                                  "Aplicação desenvolvida com JavaScript puro, HTML5 e CSS3",
+                                                  "Consumo da API Open-Meteo para dados meteorológicos",
+                                                  "Uso da BigDataCloud para informações de localização",
+                                                  "Vite utilizado no ambiente de desenvolvimento e build"
+                                              ],
+                         "learnings":  "A aplicação aprofundou o uso de APIs externas, geolocalização, tratamento de estados assíncronos e criação de interfaces responsivas sem depender de frameworks de frontend.",
+                         "gallery":  [
+                                         {
+                                             "src":  "./imagens/projetos/app-de-clima/appclima1.png",
+                                             "title":  "Busca de cidade",
+                                             "category":  "Aplicação",
+                                             "device":  "Desktop",
+                                             "alt":  "Busca de cidade no App de Clima",
+                                             "caption":  "Tela inicial com busca manual e tratamento para localização não autorizada."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/app-de-clima/appclima2.png",
+                                             "title":  "Clima atual",
+                                             "category":  "Aplicação",
+                                             "device":  "Desktop",
+                                             "alt":  "Interface do App de Clima",
+                                             "caption":  "Condições atuais, temperatura, umidade, sensação térmica e vento."
+                                         },
+                                         {
+                                             "src":  "./imagens/projetos/app-de-clima/appclima3.png",
+                                             "title":  "Previsão de cinco dias",
+                                             "category":  "Aplicação",
+                                             "device":  "Desktop",
+                                             "alt":  "Previsão dos próximos dias no App de Clima",
+                                             "caption":  "Projeção meteorológica para cinco dias com máximas, mínimas e condições previstas."
+                                         }
+                                     ],
                          "tech":  [
                                       "JavaScript",
                                       "HTML/CSS",
@@ -67,6 +367,22 @@
                          "mediaText":  "Imagem ou vídeo do projeto",
                          "trailerUrl":  "https://www.youtube.com/watch?v=zmuAaCuOgoE",
                          "description":  "É um jogo de Ação e Plataforma 2D no estilo Metroidvania e Soulslike, desenvolvido em Pixel Art com a poderosa Godot Engine. Este projeto foi concebido para um trabalho acadêmico (Universidade do Sul de Santa Catarina - 2º e 4º Semestre de 2025).",
+                         "objective":  "Desenvolver uma experiência de ação e plataforma 2D que combine exploração no estilo Metroidvania com elementos de dificuldade e progressão inspirados em jogos Soulslike.",
+                         "features":  [
+                                          "Exploração em cenários de plataforma 2D",
+                                          "Progressão inspirada no gênero Metroidvania",
+                                          "Elementos de combate e desafio no estilo Soulslike",
+                                          "Direção visual construída em Pixel Art",
+                                          "Projeto acadêmico desenvolvido com a Godot Engine"
+                                      ],
+                         "technicalDetails":  [
+                                                  "Desenvolvimento realizado na Godot Engine",
+                                                  "Construção de cenários e elementos visuais em Pixel Art",
+                                                  "Organização das mecânicas de movimentação, combate e progressão",
+                                                  "Trailer incorporado à página para demonstrar a jogabilidade"
+                                              ],
+                         "learnings":  "O projeto reuniu programação de jogos, organização de cenas, criação de mecânicas 2D e trabalho com uma direção visual própria dentro de um contexto acadêmico.",
+                         "gallery":  [],
                          "tech":  [
                                       "Godot",
                                       "Pixel Art"
