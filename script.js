@@ -144,7 +144,7 @@ function renderPortfolio(data) {
 
       const openProjectDetail = () => {
         if (!detailUrl) return;
-        window.open(detailUrl, "_blank", "noopener");
+        window.location.assign(detailUrl);
       };
 
       card.addEventListener("click", openProjectDetail);
