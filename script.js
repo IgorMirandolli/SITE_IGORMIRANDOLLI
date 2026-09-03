@@ -97,6 +97,7 @@ function renderPortfolio(data) {
   const projectsGrid = document.getElementById("projects-grid");
   if (projectsGrid) {
     projectsGrid.innerHTML = (data.projects || [])
+      .filter((project) => !project.hidden)
       .map((project) => {
         const techList = (project.tech || []).map((tech) => `<li>${safeText(tech)}</li>`).join("");
         const embedUrl = getYouTubeEmbedUrl(project.trailerUrl);

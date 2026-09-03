@@ -5,7 +5,7 @@
     "role":  "Desenvolvedor de backend e frontend",
     "profileImageUrl":  "./imagens/profile.jpg",
     "tagline":  "Desenvolvo aplicações completas com Flutter e APIs, focado em performance e experiência do usuário.",
-    "about":  "Sou estudante de Sistemas de Informação, atualmente no 5º semestre, com foco em desenvolvimento de software e construção de aplicações completas.\n\nAo longo da graduação, adquiri conhecimentos em áreas como modelos, métodos e técnicas da engenharia de software, gestão e qualidade de software, sistemas computacionais e segurança, ambientes computacionais e conectividade, usabilidade, desenvolvimento web, mobile e jogos, além de sistemas distribuídos.\n\nTenho experiência prática com diversas tecnologias, incluindo Node.js, Vue.js, Flutter, Dart, além de ferramentas como Visual Studio Code e GitHub. Também possuo conhecimento em bancos de dados como MySQL, Oracle e ferramentas como DBeaver.\n\nAtualmente, atuo como estagiário de desenvolvimento de software na Secretaria da Agricultura, onde estou finalizando o desenvolvimento de um sistema completo de chamados para a intranet da instituição, envolvendo desde a modelagem até a implementação e testes.\n\nTenho interesse em evoluir continuamente como desenvolvedor, buscando criar soluções eficientes, bem estruturadas e que gerem valor real.",
+    "about":  "Sou estudante de Sistemas de Informação, atualmente no 6º semestre, com foco em desenvolvimento de software e construção de aplicações completas.\n\nAo longo da graduação, adquiri conhecimentos em áreas como modelos, métodos e técnicas da engenharia de software, gestão e qualidade de software, sistemas computacionais e segurança, ambientes computacionais e conectividade, usabilidade, desenvolvimento web, mobile e jogos, além de sistemas distribuídos.\n\nTenho experiência prática com diversas tecnologias, incluindo Node.js, Vue.js, Flutter, Dart, além de ferramentas como Visual Studio Code e GitHub. Também possuo conhecimento em bancos de dados como MySQL, Oracle e ferramentas como DBeaver.\n\nAtualmente, atuo como estagiário de desenvolvimento de software na Secretaria da Agricultura, onde estou finalizando o desenvolvimento de um sistema completo de chamados para a intranet da instituição, envolvendo desde a modelagem até a implementação e testes.\n\nTenho interesse em evoluir continuamente como desenvolvedor, buscando criar soluções eficientes, bem estruturadas e que gerem valor real.",
     "projects":  [
                      {
                          "name":  "Burger Factory",
@@ -219,6 +219,7 @@
                      {
                          "name":  "Patrique Fitness App",
                          "slug":  "patrique-fitness-app",
+                         "hidden":  true,
                          "imageUrl":  "./imagens/projetos/patrique-fitness-app/patriqueapp.png",
                          "description":  "A Patrique Fitness é um ecossistema completo para quem busca saúde e alta performance. Mais do que um simples rastreador de treinos, o app utiliza gamificação e inteligência artificial para manter o usuário motivado e bem orientado.",
                          "objective":  "Criar uma experiência mobile que una acompanhamento de treinos, motivação e orientação inteligente em uma única plataforma voltada à evolução do usuário.",

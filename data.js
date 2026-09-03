@@ -6,7 +6,7 @@
   profileImageUrl: "./imagens/profile.jpg",
   tagline: "Desenvolvo aplicações completas com Flutter e APIs, focado em performance e experiência do usuário.",
   cvUrl: "./imagens/curriculoIgorViniciusSotiliMirandolli.pdf",
-  about: `Sou estudante de Sistemas de Informação, atualmente no 5º semestre, com foco em desenvolvimento de software e construção de aplicações completas.
+  about: `Sou estudante de Sistemas de Informação, atualmente no 6º semestre, com foco em desenvolvimento de software e construção de aplicações completas.
 
 Ao longo da graduação, adquiri conhecimentos em áreas como modelos, métodos e técnicas da engenharia de software, gestão e qualidade de software, sistemas computacionais e segurança, ambientes computacionais e conectividade, usabilidade, desenvolvimento web, mobile e jogos, além de sistemas distribuídos.
 
@@ -221,6 +221,7 @@ Tenho interesse em evoluir continuamente como desenvolvedor, buscando criar solu
     {
       name: "Patrique Fitness App",
       slug: "patrique-fitness-app",
+      hidden: true,
       imageUrl: "./imagens/projetos/patrique-fitness-app/patriqueapp.png",
       description: "A Patrique Fitness é um ecossistema completo para quem busca saúde e alta performance. Mais do que um simples rastreador de treinos, o app utiliza gamificação e inteligência artificial para manter o usuário motivado e bem orientado.",
       objective: "Criar uma experiência mobile que una acompanhamento de treinos, motivação e orientação inteligente em uma única plataforma voltada à evolução do usuário.",
